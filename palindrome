@@ -1,0 +1,27 @@
+import java.util.*;
+public class  Main 
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("string:");
+        String name=sc.nextLine();
+        name=name.toUpperCase();
+        name=name.replaceAll("\\s+","");
+        int front,back;
+        for(front=0,back=name.length()-1;front<back;front++,back--)
+        {
+            if(name.charAt(front)!=name.charAt(back))
+            {
+                System.out.println("not palindrome");
+                return;
+            }
+              
+            
+            
+        }
+        System.out.print("palindrome");
+       
+        
+    }
+}
