@@ -1,0 +1,94 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the boy name:");
+        String name1=sc.next();
+        System.out.print("Enter the girl name:");
+        String name2=sc.next(); 
+        List<Character>l1=new ArrayList<>();
+        List<Character>l2=new ArrayList<>();
+        for(char c:name1.toCharArray())
+        {
+            l1.add(c);
+            
+        } 
+        System.out.println(l1);
+        for(char c:name2.toCharArray())
+        {
+            l2.add(c);
+        }
+        System.out.println(l2);
+        int a=l1.size();
+        int b=l2.size();
+        for(int i=0;i<a;i++)
+        {
+            for(int j=0;j<b;j++)
+            {
+                if(l1.get(i).equals(l2.get(j)))
+                {
+                    l1.set(i,'2');
+                    l2.set(j,'2');
+                }
+            }
+            
+        }
+        System.out.println(l1);
+        System.out.println(l2);
+        int new1=0;
+        int new2=0;
+        for(char c:l1)
+        {
+            if(c!='2')
+            {
+                new1++;
+            }
+        }
+        for(char c:l2)
+        {
+            if(c!='2')
+            {
+               new2++;
+               
+            }
+        }
+        int finalcount=new1+new2;
+        System.out.println(finalcount);
+        String relation;
+        switch(finalcount)
+        {
+            case 1:
+                relation="sister";
+                break;
+            case 2:
+                relation="Enemy";
+                break;
+            case 3:
+                relation="marriage";
+                break;
+            case 4:
+                relation="affection";
+                break;
+            case 5:
+                relation="love";
+                break;
+            case 6:
+                relation="friends";
+                break;
+            default:
+                relation="unknown";
+        }
+        System.out.println("The relation is"+relation);
+        
+        
+        
+    
+    
+    
+    }
+    
+    
+    
+}
