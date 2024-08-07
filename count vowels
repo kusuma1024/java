@@ -1,0 +1,52 @@
+public class Main
+{
+    public static void main(String[]args)
+    {
+        String a=" SAVEETHA";
+        a=a.toLowerCase();
+        int vowels=0;
+        int cons=0;
+        for(int i=0; i<a.length(); i++)
+        {
+            char letter=a.charAt(i);
+            if(letter=='a'||letter=='e'||letter=='i'||letter=='o'||letter=='u')
+            {
+             vowels++;   
+            }
+            else
+            {
+                cons++;
+            }
+            
+                
+        }
+        System.out.print("vowels:"+vowels);
+    }
+}
+//without space vowels count
+public class Main
+{
+    public static void main(String[]args)
+    {
+        String a="AND  ";
+        a=a.toLowerCase();
+        int vowels=0;
+        int cons=0;
+        for(int i=0; i<a.length(); i++)
+        {
+            char letter=a.charAt(i);
+            if(letter=='a'||letter=='e'||letter=='i'||letter=='o'||letter=='u')
+            {
+             vowels++;   
+            }
+            else if(letter<='a'||letter>='z')
+            {
+                cons++;
+            }
+            
+                
+        }
+        System.out.println("vowels:"+vowels);
+        System.out.println("cons:"+cons);
+    }
+}
