@@ -1,9 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
 public class Main
 {
     public static void main(String[]args)
     {
         String a=" SAVEETHA";
         a=a.toLowerCase();
+        List<Character> l=new ArrayList<>();
         int vowels=0;
         int cons=0;
         for(int i=0; i<a.length(); i++)
@@ -11,18 +14,23 @@ public class Main
             char letter=a.charAt(i);
             if(letter=='a'||letter=='e'||letter=='i'||letter=='o'||letter=='u')
             {
-             vowels++;   
+             vowels++; 
+             l.add(letter);
             }
             else
             {
                 cons++;
             }
             
-                
+               
         }
-        System.out.print("vowels:"+vowels);
+        System.out.println(l);
+        System.out.println(vowels+ " ");
+        
+        
     }
 }
+
 //without space vowels count
 public class Main
 {
