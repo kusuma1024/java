@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        int[][]a={
+            {1,2,3},
+            {2,1,4},
+            {3,4,1}
+            
+        };
+        int rows=a.length;
+        int col=a[0].length;
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<col;j++){
+               if(a[i][j]!=a[j][i]){
+                   System.out.print("not Symmetric");
+                   return;
+               }
+            }
+        }
+        System.out.print("Symmetric");
+        }
+        
+    }
