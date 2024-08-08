@@ -1,0 +1,19 @@
+public class Main{
+    public static void main(String[]args){
+        int[]n=new int[args.length];
+        for(int i=0;i<args.length;i++){
+            try{
+                n[i]=Integer.parseInt(args[i]);
+            }
+            catch(NumberFormatException l){
+                System.out.print("Invalid integer");
+                return;
+            }
+        }
+        int sum=0;
+        for(int i=0;i<args.length;i++){
+            sum=sum+n[i];
+        }
+        System.out.print(sum);
+    }
+}
