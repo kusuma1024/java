@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int num1=sc.nextInt();
+        int gcd=findgcd(num,num1);
+        System.out.print("The GCD of "+num+ " and "+num1+" is "+gcd);
+    } 
+    public static int findgcd(int num,int num1){
+        if(num1==0){
+            return num;
+        }
+        return findgcd(num1,num%num1);
+    }
+}
