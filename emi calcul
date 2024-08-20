@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("ENter the amount: ");
+        int p=sc.nextInt();
+        System.out.print("Enter the rate of intrest: ");
+        double r=sc.nextDouble();
+         System.out.print("Enter the years: ");
+        float n=sc.nextFloat();
+        n=n*12;
+        r=r/100/12;
+        double emi=(p*r*Math.pow((1+r),n))/(Math.pow((1+r),n)-1);
+        System.out.print(Math.round(emi));
+    }
+}
